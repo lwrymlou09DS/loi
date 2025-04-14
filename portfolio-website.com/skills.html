@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | Mario</title>
+
+  <!-- AOS & Font Awesome -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-container h1 {
+      font-size: 1.5rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a,
+    .toggle-btn {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      background: transparent;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s, background 0.3s;
+    }
+
+    nav a:hover,
+    .toggle-btn:hover {
+      color: #00bcd4;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .logo-container img {
+      width: 80px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-container img:hover {
+      transform: scale(1.1);
+    }
+
+    .skill {
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .skill p {
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .skill-bar {
+      background: #ddd;
+      border-radius: 25px;
+      overflow: hidden;
+      height: 25px;
+    }
+
+    .skill-bar div {
+      height: 100%;
+      background: #00bcd4;
+      width: 0;
+      border-radius: 25px;
+      animation: fill 2s forwards;
+    }
+
+    .html { width: 75%; }
+    .css { width: 70%; }
+
+    @keyframes fill {
+      from { width: 0; }
+      to { width: var(--width); }
+    }
+
+    .floating-letters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .floating-letters span {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #00bcd4;
+      text-shadow: 0 0 10px #00bcd4, 0 0 20px #00e5ff;
+      animation: bounce 2s ease-in-out infinite, fadeIn 1s forwards;
+      opacity: 0;
+    }
+
+    .floating-letters span:nth-child(1) { animation-delay: 0s, 0s; }
+    .floating-letters span:nth-child(2) { animation-delay: 0.1s, 0.1s; }
+    .floating-letters span:nth-child(3) { animation-delay: 0.2s, 0.2s; }
+    .floating-letters span:nth-child(4) { animation-delay: 0.3s, 0.3s; }
+    .floating-letters span:nth-child(5) { animation-delay: 0.4s, 0.4s; }
+    .floating-letters span:nth-child(6) { animation-delay: 0.5s, 0.5s; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark-mode header {
+      background: #1e1e1e;
+    }
+
+    body.dark-mode nav a,
+    body.dark-mode .toggle-btn {
+      color: #ccc;
+    }
+
+    body.dark-mode .toggle-btn:hover,
+    body.dark-mode nav a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #00e5ff;
+    }
+
+    body.dark-mode .floating-letters span {
+      color: #00e5ff;
+      text-shadow: 0 0 10px #00e5ff, 0 0 20px #00ffff;
+    }
+
+    body.dark-mode .skill-bar {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1>Mario Louiegy C. Buenaflor</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="certifications.html">Certifications</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="toggle-btn" id="toggleMode">Light Mode</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section" data-aos="zoom-in">
+  <div class="floating-letters">
+    <span>S</span><span>K</span><span>I</span><span>L</span><span>L</span><span>S</span>
+  </div>
+
+  <div class="logo-container" data-aos="fade-up">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo">
+  </div>
+
+  <h2>My Skills</h2>
+  <div class="skill">
+    <p><i class="fab fa-html5"></i> HTML - 75%</p>
+    <div class="skill-bar"><div class="html"></div></div>
+  </div>
+  <div class="skill">
+    <p><i class="fab fa-css3-alt"></i> CSS - 70%</p>
+    <div class="skill-bar"><div class="css"></div></div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  document.getElementById('toggleMode').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    this.textContent = document.body.classList.contains('dark-mode')
+      ? 'Dark Mode'
+      : 'Light Mode';
+  });
+</script>
+
+</body>
+</html>

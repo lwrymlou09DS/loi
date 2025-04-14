@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Mario</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #111;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #222;
+      padding: 1em;
+    }
+
+    header h1 {
+      margin: 0;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a,
+    .toggle-btn {
+      font-family: inherit;
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      background: transparent;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover,
+    .toggle-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #00e0ff;
+    }
+
+    .toggle-btn {
+      background: #00e0ff;
+      color: white;
+    }
+
+    .section {
+      padding: 50px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .contact-info {
+      margin: 30px 0;
+    }
+
+    .contact-info img {
+      width: 60px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 5px #0ff);
+    }
+
+    .contact-info a, .contact-info p {
+      font-size: 1.2rem;
+      color: #0cf;
+      text-decoration: none;
+    }
+
+    /* Floating letters */
+    .floating-letters {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .floating-letters span {
+      position: absolute;
+      font-size: 2rem;
+      font-weight: bold;
+      color: rgba(0, 255, 255, 0.1);
+      animation: float 15s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="floating-letters">
+  <span style="left: 5%;">C</span>
+  <span style="left: 15%;">O</span>
+  <span style="left: 25%;">N</span>
+  <span style="left: 35%;">T</span>
+  <span style="left: 45%;">A</span>
+  <span style="left: 55%;">C</span>
+  <span style="left: 65%;">T</span>
+  <span style="left: 75%;">M</span>
+  <span style="left: 85%;">E</span>
+</div>
+
+<header>
+  <h1>Mario Louiegy C. Buenaflor</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+    <button class="toggle-btn" id="toggleMode">Light Mode</button>
+  </nav>
+</header>
+
+<section class="section" data-aos="flip-left">
+  <h2>Contact</h2>
+
+  <div class="contact-info">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Logo">
+    <p><a href="https://www.facebook.com/Louiendyou" target="_blank">Facebook</a></p>
+  </div>
+
+  <div class="contact-info">
+    <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon">
+    <p>09911912521</p>
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  document.getElementById('toggleMode').addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+    this.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
+  });
+</script>
+</body>
+</html>

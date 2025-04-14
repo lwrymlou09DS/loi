@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications | Mario</title>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a,
+    .toggle-btn {
+      font-family: inherit;
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      background: transparent;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover,
+    .toggle-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #00e0ff;
+    }
+
+    .toggle-btn {
+      background: #00e0ff;
+      color: white;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .floating-letters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .floating-letters span {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #00bcd4;
+      text-shadow: 0 0 10px #00bcd4, 0 0 20px #00e5ff;
+      animation: bounce 2s ease-in-out infinite, fadeIn 1s forwards;
+      opacity: 0;
+    }
+
+    .floating-letters span:nth-child(n) {
+      animation-delay: calc(var(--i) * 0.1s), calc(var(--i) * 0.1s);
+    }
+
+    .floating-letters span:nth-child(1) { --i: 0; }
+    .floating-letters span:nth-child(2) { --i: 1; }
+    .floating-letters span:nth-child(3) { --i: 2; }
+    .floating-letters span:nth-child(4) { --i: 3; }
+    .floating-letters span:nth-child(5) { --i: 4; }
+    .floating-letters span:nth-child(6) { --i: 5; }
+    .floating-letters span:nth-child(7) { --i: 6; }
+    .floating-letters span:nth-child(8) { --i: 7; }
+    .floating-letters span:nth-child(9) { --i: 8; }
+    .floating-letters span:nth-child(10) { --i: 9; }
+    .floating-letters span:nth-child(11) { --i: 10; }
+    .floating-letters span:nth-child(12) { --i: 11; }
+    .floating-letters span:nth-child(13) { --i: 12; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .certificate-container {
+      margin: 30px auto;
+      max-width: 700px;
+      padding: 20px;
+      position: relative;
+      animation: flicker 2s infinite alternate;
+    }
+
+    .certificate-container img {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00f2ff;
+      border: 5px solid transparent;
+    }
+
+    .certificate-container::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 20px;
+      background: linear-gradient(45deg, #00f2ff, #005eff, #00f2ff, #005eff);
+      background-size: 400% 400%;
+      animation: lightningBorder 2s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes lightningBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Dark mode */
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark-mode header {
+      background: #1e1e1e;
+    }
+
+    body.dark-mode nav a {
+      color: #ccc;
+    }
+
+    body.dark-mode .toggle-btn {
+      background: #555;
+    }
+
+    body.dark-mode .floating-letters span {
+      color: #00e5ff;
+      text-shadow: 0 0 10px #00e5ff, 0 0 20px #00ffff;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mario Louiegy C. Buenaflor</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skills.html">Skills</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+    <button class="toggle-btn" id="toggleMode">Light Mode</button>
+  </nav>
+</header>
+
+<section class="section" data-aos="fade-up">
+  <div class="floating-letters">
+    <span>C</span><span>E</span><span>R</span><span>T</span><span>I</span><span>F</span><span>I</span><span>C</span><span>A</span><span>T</span><span>I</span><span>O</span><span>N</span><span>S</span>
+  </div>
+
+  <h2>Responsive Web Design Certificate</h2>
+  <div class="certificate-container" data-aos="zoom-in">
+    <img src="C:\Users\Zaoxinu\OneDrive\Pictures\responsive-certificate.jpg" alt="Mario's Responsive Web Design Certificate">
+  </div>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  document.getElementById('toggleMode').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    this.textContent = document.body.classList.contains('dark-mode') ? 'Dark Mode' : 'Light Mode';
+  });
+</script>
+</body>
+</html>

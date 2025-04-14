@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Mario Buenaflor</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 10px 18px;
+      background: #00bcd4;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #0197a5;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ID Card */
+    .id-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      max-width: 700px;
+      width: 100%;
+      margin: auto;
+      border: 2px solid #00bcd4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .id-left {
+      flex: 1;
+      text-align: left;
+    }
+
+    .id-left h2 {
+      margin-bottom: 10px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .id-left p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .floating-letters {
+      display: flex;
+      gap: 15px;
+    }
+
+    .floating-letters span {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #00bcd4;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .floating-letters span:nth-child(1) { animation-delay: 0s; }
+    .floating-letters span:nth-child(2) { animation-delay: 0.3s; }
+    .floating-letters span:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Photo Section */
+    .id-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo-wrapper {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .photo-wrapper::before {
+      content: '';
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #00bcd4, #00e5ff);
+      filter: blur(8px);
+      z-index: -1;
+      animation: rotateGlow 6s linear infinite;
+    }
+
+    .photo-wrapper img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00bcd4;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes rotateGlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Mario Louiegy C. Buenaflor</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="id-card">
+      <div class="id-left">
+        <h2>Hello, I'm Mario</h2>
+        <p>ICT Student & Future Programmer</p>
+        <div class="floating-letters">
+          <span>I</span><span>C</span><span>T</span>
+        </div>
+      </div>
+      <div class="id-right">
+        <div class="photo-wrapper">
+          <img src="C:\Users\Zaoxinu\OneDrive\Attachments\louiepogi.jpg" alt="Mario's Photo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
